@@ -25,7 +25,7 @@
           v-model="login.password"
         />
       </div>
-      <pre>{{login}}</pre>
+      <!-- <pre>{{login}}</pre> -->
       <div class="mb-3">
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="dropdownCheck" />
