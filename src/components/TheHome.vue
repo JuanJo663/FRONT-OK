@@ -4,7 +4,7 @@
       <div class="container">
         <h1>Bienvenido a mi sitio web!!!</h1>
         <button
-          type="submit"
+           type="submit"
           class="btn btn-default navbar-btn"
           @click.prevent="logOut"
         >
@@ -46,8 +46,10 @@ export default {
       }
     },
     logOut() {
+      //Elimina Token y usuario del localStorage al salir del sitio
       localStorage.removeItem("jwt");
       localStorage.removeItem("user");
+      //Devuelve la ventana a la condicion inicial.
       this.$router.push("/");
     },
   },

@@ -25,7 +25,7 @@
           v-model="login.password"
         />
       </div>
-      <pre>{{login}}</pre>
+      <!-- <pre>{{login}}</pre> -->
       <div class="mb-3">
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="dropdownCheck" />
@@ -58,7 +58,8 @@ export default {
   methods: {
     async loginUser() {
       try {
-        let response = await this.$http.post('/api/user/login', this.login);
+        //ruta en localhost:3000 es ('/api/user/login')
+        let response = await this.$http.post('/api/usuario/login', this.login);
         console.log(response);
         let token = response.data.tokenReturn;
         let user = response.data.user;
